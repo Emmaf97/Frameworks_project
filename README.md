@@ -6,9 +6,9 @@
 #### Link to GithubRepo [click here](https://github.com/Emmaf97/Frameworks_project)
 `need to cmd + click on the above link`
 
-# Flask Project for Gym Website
+# Django Project for Call of Duty Zombies Fansite
 ## Goal of project
-### To allow newcomers to connect with trainers who specialise in different personal training programs. Allow seasoned veterans to get information on different workouts.
+### To allow people to post threads on how to complete Zombie Easter Eggs or how to play maps to higher rounds.
 
 
 # Creating Virtual Environment
@@ -29,9 +29,10 @@ Users can switch from Darkmode to LightMode by clicking on the icon.
 Contact form has validation on the input fields. Some fields only allow text, some allow only numbers, some require certain length and specific characters (email address with @ format correct email ending e.g. gmail)
 
 ## Feature 3
-#### --- Text Animation  ---
-Adding animation to text to add creative css to the project.
+#### -- Login/Signup ---
+The user can login and signup using the login and signup forms. This is stored in a database.
 
 ## Feature 4
-#### -- Login/Signup ---
-The user can login and signup(partially complete) using the login and signup forms. As this project doesn't require a database I am using a json file to add and retrieve the data, in order to verify the login credentials and add a new user to the json file via the signup functionality.
+#### --- Customisable User Profiles  ---
+Users can update their name profile picture and contact information using forms provided.
+
