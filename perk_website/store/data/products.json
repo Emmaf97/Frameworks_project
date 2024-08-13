@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "00",
+      "item_name": "Classic White T-Shirt",
+      "description": "A classic white t-shirt made from 100% cotton, perfect for everyday wear.",
+      "colour": "White",
+      "quantity": 50,
+      "image": "products/default_shirt1_img.jpg"
+    },
+    {
+      "id": "01",
+      "item_name": "Blue Denim Jeans",
+      "description": "Stylish blue denim jeans with a slim fit, perfect for casual outings.",
+      "colour": "Blue",
+      "quantity": 30,
+      "image": "products/five_img.png"
+    },
+    {
+      "id": "02",
+      "item_name": "Red Cotton Dress",
+      "description": "A beautiful red cotton dress, lightweight and comfortable for summer.",
+      "colour": "Red",
+      "quantity": 20,
+      "image": "products/Kino_img.png"
+    },
+    {
+      "id": "03",
+      "item_name": "Black Leather Jacket",
+      "description": "A premium black leather jacket with a modern fit, perfect for chilly evenings.",
+      "colour": "Black",
+      "quantity": 10,
+      "image": "products/mobofdead_img.png"
+    },
+    {
+      "id": "04",
+      "item_name": "Green Wool Scarf",
+      "description": "Warm and cozy green wool scarf, ideal for cold winter days.",
+      "colour": "Green",
+      "quantity": 40,
+      "image": "products/origins_img.png"
+    },
+    {
+      "id": "05",
+      "item_name": "Green Wool Scarf",
+      "description": "Warm and cozy green wool scarf, ideal for cold winter days.",
+      "colour": "Green",
+      "quantity": 5,
+      "image": "products/shirt2_img.jpg"
+    }
+  ]
+}

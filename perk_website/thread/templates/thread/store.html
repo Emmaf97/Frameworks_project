@@ -1,4 +1,18 @@
 {% extends "thread/base.html" %}
-    {% block content %}
-        <h1>Store!</h1>
-    {% endblock content %}
+{% block content %}
+    <h1>Store!</h1>
+    {% for product in products %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ product.item_name }}</a>
+                <small class="text-muted">{{ product.description }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ product.colour }}</a></h2>  <!-- Use 'colour' as in the model -->
+            <p class="article-content">{{ product.quantity }}</p>  <!-- Correct 'post' to 'product' -->
+            <!-- <p class="article-content">{{ product.image.url}}</p> -->
+            <img src="{{ product.image.url }}" alt="{{ product.item_name }}">
+        </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
