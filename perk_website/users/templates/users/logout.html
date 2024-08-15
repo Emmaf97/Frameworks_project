@@ -1,0 +1,12 @@
+{% extends "thread/base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <h2>You have been logged out</h2>
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+{% endblock content %}
