@@ -41,6 +41,11 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView): # New
         form.instance.author = self.request.user
         return super().form_valid(form)
        
+    def test_func(self):
+        post = self.get_object()
+        # Check if the current user is the author of the post
+        return post.author == self.request.user
+       
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView): # New class PostDeleteView created here
     model = Post
     success_url = "/"
@@ -50,6 +55,11 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView): # New
         if self.request.user == post.author:
             return True
         return False
+       
+    def test_func(self):
+        post = self.get_object()
+        # Check if the current user is the author of the post
+        return post.author == self.request.user
        
                   
 def home(request):
