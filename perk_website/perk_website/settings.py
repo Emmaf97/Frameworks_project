@@ -89,6 +89,7 @@ WSGI_APPLICATION = 'perk_website.wsgi.application'
 # }
 
 DATABASES = {"default": dj_database_url.config(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")}  # Loads connection string from DATABASE_URL
+DATABASE_URL="postgresql://perkaholichubdb_user:EGcZK9lBNBYjBYr9Sear1bu2f3rUXzL3@dpg-cr06n15umphs7391iiag-a.frankfurt-postgres.render.com/perkaholichubdb"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
