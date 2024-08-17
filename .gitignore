@@ -1,0 +1,10 @@
+Images
+other_required_files/*
+links.md
+env
+cmds
+.DS_Store
+staticfiles
+*.pyc
+db.sqlite3
+.env
