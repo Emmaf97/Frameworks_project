@@ -17,7 +17,7 @@ from django.views.generic import (
 
 class PostListView(ListView):
      model = Post
-     template_name = 'thread/home.html'
+     template_name = 'thread/thread.html'
      context_object_name = 'posts'
      ordering = ['-date_posted']
      paginate_by = 5
@@ -64,10 +64,10 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView): # New
        
                   
 def home(request):
-    context = {
-       'posts': Post.objects.all()
-    }
-    return render(request, 'thread/home.html', context)
+    # context = {
+    #    'posts': Post.objects.all()
+    # }
+    return render(request, 'thread/home.html')
 
 def about(request):
     return render(request, 'thread/about.html',{'title': 'About'})
@@ -119,7 +119,10 @@ def store(request):
     return render(request, 'thread/store.html', {'products': products})
    
 def thread(request):
-    return render(request, 'thread/thread.html')
+    context = {
+       'posts': Post.objects.all()
+        }
+    return render(request, 'thread/thread.html', context)
 
 def contact(request):
     return render(request, 'thread/contact.html')
