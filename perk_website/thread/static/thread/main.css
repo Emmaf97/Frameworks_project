@@ -7,6 +7,7 @@
  
  h1, h2, h3, h4, h5, h6 {
   color: #E03709;
+  text-align: center;
  }
  
  ul {
@@ -47,7 +48,7 @@ a {
  color: #362A26;
  text-decoration: underline;
 }
- .article-title {
+.article-title {
   color: #444444;
  }
  
@@ -104,10 +105,96 @@ a {
  .account-heading {
   font-size: 2.5rem;
  }
- 
+p.light{
+  color: white;
+  text-align: center;
+  max-width: 92%;
+ }
  .row{
   margin-top: 82px !important;
  }
+ .border {
+  border: 1px solid grey !important;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+p.text-primary {
+ color: #E03709 !important;
+}
+ #base {
+  display: grid;
+  grid-template-areas: "head" "nav" "main" "foot";
+  grid-gap: 20px;
+  text-align: center;
+  width: 97%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+#base>header {
+  grid-area: head;
+  display: grid;
+  color: rgb(246, 2, 2);
+  font-weight: bolder;
+  width: 96%;
+  height: 111px;
+}
+
+#base>nav {
+  grid-area: nav;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 20px;
+  width: 96%;
+}
+.card {
+ background-color: #332E2D;
+ height: 20vh;
+ margin: auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 3%;
+}
+.card.secondNav{
+ width: 100%;
+ height: 64vh;
+ border: solid grey 1px;
+ 
+}
+.card.secondNav.items{
+ width: 100%;
+ height: 70vh;
+ border: solid grey 1px;
+ border-radius: 20px;
+ margin-bottom: 3%;
+ margin-top: 3%;
+
+}
+.card.about{
+ height: 76vh;
+ margin-bottom: 3%;
+}
+.card.landing.about{
+ height: 55vh;
+ margin-bottom: 3%;
+}
+#base>main {
+  grid-area: main;
+  width: 96%;
+  color: rgb(241, 8, 8);
+  font-weight: bolder;
+}
+
+#base>footer {
+  grid-area: foot;
+  display: block;
+  color: whitesmoke;
+  width: 96%;
+  text-align: center;
+  border: solid grey 1px;
+  border-radius: 20px;
+}
 }
 
 @media only screen and (min-width: 600px){
