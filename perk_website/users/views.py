@@ -26,14 +26,31 @@ def profile(request):
 def profile(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, 
-                                   request.FILES, 
-                                   instance=request.user.profile)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+
         if u_form.is_valid() and p_form.is_valid():
+            # Save user form
             u_form.save()
-            p_form.save()
-            messages.success(request, f'Account created successfully, now you can login.')
-            return redirect('login')
+
+            # Save profile form
+            profile = p_form.save(commit=False)
+            
+            # Handle predefined image choices
+            selected_image = p_form.cleaned_data.get('image_choice')
+            if selected_image:
+                # This is a relative path to a static file, not an actual file object
+                # To use static files, ensure it is served correctly
+                profile.image = selected_image
+            else:
+                # Handle file upload (if provided)
+                if 'image' in request.FILES:
+                    profile.image = request.FILES['image']
+            
+            profile.save()  # Save profile with updated image
+            
+            messages.success(request, 'Your account has been successfully updated.')
+            return redirect('thread-thread')  # Ensure this is a valid URL name
+
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)

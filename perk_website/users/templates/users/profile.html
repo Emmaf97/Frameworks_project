@@ -1,9 +1,11 @@
 {% extends "thread/base.html" %}
 {% load crispy_forms_tags %} <!-- Updated here to load crispy forms -->
+{% load static %}
 {% block content %}
 <div class="content-section">
     <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <img class="rounded-circle account-img" src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'users/images/default.jpg' %}{% endif %}">
+        <!-- <img class="rounded-circle account-img" src="{{ user.profile.image.url }}"> -->
         <div class="media-body">
             <h2 class="account-heading">{{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
@@ -13,8 +15,21 @@
      {% csrf_token %}
      <fieldset class="form-group">
          <legend class="border-bottom mb-4">Profile Info</legend> <!-- Updated ledgend to display Profile Info -->
-         {{ u_form|crispy }} <!-- Updated to load the user form and let crispy take care of the formating -->
-         {{ p_form|crispy }} <!-- Updated to load the profile form and let crispy take care of the formating -->
+         {{ u_form|crispy }}
+          <!-- Updated to load the user form and let crispy take care of the formating -->
+         <!-- Updated to load the profile form and let crispy take care of the formating -->
+         <div class="form-group">
+          <label>Select Profile Image</label>
+          {% for value, label in p_form.image_choice.field.choices %}
+              <div>
+                  <label>
+                      <input type="radio" name="image_choice" value="{{ value }}" {% if p_form.image_choice.value == value %}checked{% endif %}>
+                      {{ label }} <br>
+                      <img src="{% static value %}" alt="{{ label }}" style="max-height: 100px; max-width: 100px;">
+                  </label>
+              </div>
+          {% endfor %}
+      </div>
      </fieldset>
      <div class="form-group">
          <button class="btn btn-outline-info" type="submit">Update</button> <!-- Updated button to display Profile Info -->
