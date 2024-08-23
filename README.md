@@ -21,8 +21,8 @@
 will install the flask package and its other dependencies.
 
 ## Feature 1
-#### --- LightMode ---
-Users can switch from Darkmode to LightMode by clicking on the icon.
+#### --- Post ---
+Users can upload a post to the forum, they can then edit or delete this post.
 
 ## Feature 2
 #### --- Form Validation ---
@@ -30,9 +30,10 @@ Contact form has validation on the input fields. Some fields only allow text, so
 
 ## Feature 3
 #### -- Login/Signup ---
-The user can login and signup using the login and signup forms. This is stored in a database.
+The user can login and signup using the login and signup forms. This is stored in a database(Postgresql).
 
 ## Feature 4
 #### --- Customisable User Profiles  ---
-Users can update their name profile picture and contact information using forms provided.
+Users can update their name profile picture and contact information using forms provided.(Username, Email and Profile Picture)
+
 
