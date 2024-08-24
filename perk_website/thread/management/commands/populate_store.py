@@ -7,6 +7,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         # Open the JSON file and load the data
+        Products.objects.all().delete()
+        
         with open('store/data/products.json', 'r') as file:
             data = json.load(file)
         
