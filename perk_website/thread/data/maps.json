@@ -1,0 +1,46 @@
+{
+ "zombie_maps": [
+  {
+   "map_name": "Nacht der Untoten",
+   "wonder_weapon": "Ray Gun",
+   "easter_egg": "None",
+   "video_guide": "https://www.youtube.com/embed/8YSDQsP9qMk"
+  },
+  {
+   "map_name": "Der Riese",
+   "wonder_weapon": "Ray Gun Mk II",
+   "easter_egg": "None",
+   "video_guide": "https://www.youtube.com/embed/P20KkcWnoF8"
+  },
+  {
+   "map_name": "Kino der Toten",
+   "wonder_weapon": "Thunder Gun",
+   "easter_egg": "None",
+   "video_guide": "https://www.youtube.com/embed/XcLJDoGXkCA"
+  },
+  {
+   "map_name": "Five",
+   "wonder_weapon": "Winter's Howl",
+   "easter_egg": "None",
+   "video_guide": "https://www.youtube.com/embed/466YKLY6I3M"
+  },
+  {
+   "map_name": "Mob of the Dead",
+   "wonder_weapon": "Blundergat",
+   "easter_egg": "Yes",
+   "video_guide": "https://www.youtube.com/embed/QO-HfKJFcFQ"
+  },
+  {
+   "map_name": "Ascension",
+   "wonder_weapon": "Winter's Howl",
+   "easter_egg": "Yes",
+   "video_guide": "https://www.youtube.com/embed/RMKLm02BevE"
+  },
+  {
+   "map_name": "Origins",
+   "wonder_weapon": " staffs",
+   "easter_egg": "Yes",
+   "video_guide": "https://www.youtube.com/embed/yuXhb7kVKJc"
+  }
+ ]
+}

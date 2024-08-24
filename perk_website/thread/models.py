@@ -23,4 +23,19 @@ class Contact(models.Model):
     lname = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
+    
+    
+class Maps(models.Model):
+    map_name = models.CharField(max_length=100)
+    wonder_weapon = models.CharField(max_length=100)
+    easter_egg = models.CharField(max_length=10)
+    video_guide = models.ImageField()
+    
+    def __str__(self):
+        return self.map_name
+    
+    
+
+    
+
        
