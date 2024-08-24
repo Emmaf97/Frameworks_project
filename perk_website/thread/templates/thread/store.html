@@ -4,13 +4,10 @@
     {% for product in products %}
     <article class="media content-section">
         <div class="media-body">
-            <div class="article-metadata">
-                <a class="mr-2" href="#">{{ product.item_name }}</a>
-                <small class="text-muted">{{ product.description }}</small>
-            </div>
-            <h2><a class="article-title" href="#">{{ product.colour }}</a></h2>  <!-- Use 'colour' as in the model -->
-            <p class="article-content">{{ product.quantity }}</p>  <!-- Correct 'post' to 'product' -->
-            <!-- <p class="article-content">{{ product.image.url}}</p> -->
+            <h2><a class="article-title" href="#">{{ product.item_name  }}</a></h2>
+            <small class="text-muted">Description: {{ product.description }}</small>
+            <h2><a class="article-title" href="#">Colour: {{ product.colour }}</a></h2>
+            <p class="article-content">Quantity: {{ product.quantity }}</p>
             <img src="{{ product.image.url }}" class="img small" alt="{{ product.item_name }}">
         </div>
     </article>
