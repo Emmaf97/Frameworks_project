@@ -1,0 +1,18 @@
+{% extends "thread/base.html" %}
+{% block content %}
+    <h1>Maps!</h1>
+    {% for map in maps %}
+    <article class="media content-section">
+        <div class="media-body">
+         <h2>{{ map.map_name }}</h2>
+         <p>Wonder Weapon: {{ map.wonder_weapon }}</p>
+         <p>Easter Egg: {{ map.easter_egg }}</p>
+         
+         <iframe width="387" height="315" src="{{ map.video_guide }}" frameborder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+         </iframe>
+            <!-- <img src="{{ product.image.url }}" class="img small" alt="{{ product.item_name }}"> -->
+       </div>
+    </article>
+    {% endfor %}
+{% endblock content %}

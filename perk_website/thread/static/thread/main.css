@@ -126,7 +126,13 @@
   background-color: #E03709;
   border-color: #E03709;
  }
-
+ .btn-outline-form {
+  color: #000 !important;
+  background-color: #E03709 !important;
+  border-color: #020202 !important;
+  margin-top: 10px;
+  margin-left: 40%;
+ }
  .account-heading {
   font-size: 2.5rem;
   color: white;
