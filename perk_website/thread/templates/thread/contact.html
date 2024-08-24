@@ -1,4 +1,18 @@
 {% extends "thread/base.html" %}
-    {% block content %}
-        <h1>Contact!</h1>
-    {% endblock content %}
+{% load crispy_forms_tags %} <!-- Updated here to load crispy forms -->
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Contact Us</legend> <!-- Text Changed here -->
+                {{ c_form.as_p }}
+                <!-- {{ contact|crispy }} Updated to load the form and let crispy take care of the formating -->
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Submit</button> <!-- Text Changed here -->
+            </div>
+        </form>
+        <!-- Changed here, div removed -->
+    </div>
+{% endblock content %}

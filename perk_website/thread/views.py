@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Contact
+from django.contrib import messages #import for messages
+from .forms import ContactForm
 from store.models import Products
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
@@ -125,7 +127,20 @@ def thread(request):
     return render(request, 'thread/thread.html', context)
 
 def contact(request):
-    return render(request, 'thread/contact.html')
+    if request.method == 'POST':
+        c_form = ContactForm(request.POST)
+        if c_form.is_valid():
+            c_form.save()
+            messages.success(request, f'Contact form successfully submitted, our team will contact you shortly.')
+            return redirect('home')
+    else:
+        c_form = ContactForm()
+
+    context = {
+        'c_form': c_form
+    }
+
+    return render(request, 'thread/contact.html', context)
    
 
 
