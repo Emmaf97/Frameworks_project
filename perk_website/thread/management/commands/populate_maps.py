@@ -29,6 +29,6 @@ class Command(BaseCommand):
                 video_guide=map_data['video_guide'],
             )
             new_Map.save()
-            print(f"Created new product: {new_Map.map_name}")
+            print(f"Created new map: {new_Map.map_name}")
 
         print("Database updated: old entries deleted and new entries created.")
