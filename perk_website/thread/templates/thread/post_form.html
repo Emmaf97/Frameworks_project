@@ -5,12 +5,12 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Blog Post</legend> <!-- Text Changed here -->
+                <legend class="border-bottom mb-4">New Post</legend> <!-- Text Changed here -->
                 
                 {{ form|crispy }} <!-- Updated to load the form and let crispy take care of the formating -->
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Post</button> <!-- Text Changed here -->
+                <button class="btn btn-outline-form" type="submit">Post</button> <!-- Text Changed here -->
             </div>
         </form>
         <!-- Changed here, div removed -->
