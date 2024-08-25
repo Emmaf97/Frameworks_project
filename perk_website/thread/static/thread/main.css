@@ -139,6 +139,7 @@
   .account-heading {
     font-size: 2.5rem;
     color: white;
+    text-align: center;
   }
 
   p {
@@ -323,10 +324,344 @@
     border: solid grey 1px;
     border-radius: 20px;
   }
+    iframe{
+    width:93vw;
+    height:70vh;
+}
 }
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  body {
+    background: #332E2D;
+    color: #333333;
+    margin-top: 5rem;
+  }
 
-@media only screen and (min-width: 900px) {}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #E03709;
+    text-align: center;
+  }
 
-@media only screen and (min-width: 1200px) {}
+  .h2-title {
+    color: #E03709;
+    text-align: center;
+    opacity: 1 !important;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .img.small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    background-color: #332E2D;
+  }
+
+  .form-text {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #202428;
+  }
+
+  .bg-steel {
+    background-color: #332E2D;
+  }
+
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .content-section {
+    background: #E03709;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .text-muted {
+    color: #8B4734 !important;
+  }
+
+  a {
+    color: #362A26;
+    text-decoration: underline;
+  }
+
+  .article-title {
+    color: #444444;
+  }
+
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+
+  .article-content {
+    white-space: pre-line;
+  }
+
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+
+  .navbar-dark .navbar-brand {
+    color: #E03709;
+  }
+
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    margin-left: 40%;
+  }
+
+  .btn-info {
+    color: #000;
+    background-color: #E03709;
+    border-color: #E03709;
+  }
+
+  .btn-outline-form {
+    color: #000 !important;
+    background-color: #E03709 !important;
+    border-color: #020202 !important;
+    margin-top: 10px;
+    margin-left: 40%;
+  }
+
+  .account-heading {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  p.light {
+    color: white;
+    text-align: center;
+    max-width: 92%;
+  }
+
+  .btn-outline-info {
+    border-color: #E03709;
+    display: inline-block;
+    background-color: #E03709;
+    cursor: pointer;
+    color: var(--clr);
+    text-transform: uppercase;
+    transition: 1s;
+    overflow: hidden;
+  }
+
+  .btn-outline-info {
+    overflow: hidden;
+  }
+
+  .btn-outline-info:hover {
+    background: #E03709;
+    border-color: #E03709;
+    box-shadow: 0 0 25px var(clr),
+      0 0 100px var(--clr),
+      0 0 150px var(--clr);
+  }
+
+  .btn-outline-info span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s;
+    text-shadow: 0 35px #fff;
+    transform: translateY(0px);
+  }
+
+  .btn:hover span.hover {
+    transform: translateY(-35px);
+  }
+
+  .btn span.hover {
+    transform: translateY(-35px);
+  }
+
+  .row {
+    margin-top: 82px !important;
+  }
+
+  .border {
+    border: 1px solid grey !important;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  p.text-primary {
+    color: #E03709 !important;
+  }
+
+  #base {
+    display: grid;
+    grid-template-areas: "head" "nav" "main" "foot";
+    grid-gap: 20px;
+    text-align: center;
+    width: 97%;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  #base>header {
+    grid-area: head;
+    display: grid;
+    color: rgb(246, 2, 2);
+    font-weight: bolder;
+    width: 96%;
+    height: 111px;
+  }
+
+  #base>nav {
+    grid-area: nav;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 20px;
+    width: 96%;
+  }
+
+  .card {
+    background-color: #332E2D;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+
+  .card.secondNav {
+    height: 88vh;
+    width: 100vw;
+    border: solid grey 1px;
+
+  }
+
+  .card.secondNav.items {
+    width: 100%;
+    height: 70vh;
+    border: solid grey 1px;
+    border-radius: 20px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card.secondNav.items.league {
+    background-image: url(/media/products/league_img.png);
+
+  }
+
+  .card.secondNav.items.store {
+    background-image: url(/media/products/shirt2_img.jpg);
+
+  }
+
+  .card.secondNav.items.threads {
+    background-image: url(/media/products/Kino_img.png);
+
+  }
+
+  .outline {
+    background-color: rgba(240, 248, 255, 0.7);
+  }
+  .table{
+    width: 100vw;
+  }
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    height: 10vh;
+  }
+
+  .text-secondary {
+    color: #464f57 !important;
+    text-align: center;
+  }
+
+  .card.about {
+    height: 76vh;
+    width: 100vw;
+    margin-bottom: 3%;
+  }
+
+  .card.landing.about {
+    height: 55vh;
+    width: 100vw;
+    margin-bottom: 3%;
+  }
+
+  #base>main {
+    grid-area: main;
+    width: 96%;
+    color: rgb(241, 8, 8);
+    font-weight: bolder;
+  }
+
+  #base>footer {
+    grid-area: foot;
+    display: block;
+    color: whitesmoke;
+    width: 96%;
+    text-align: center;
+    border: solid grey 1px;
+    border-radius: 20px;
+  }
+  iframe {
+    border: 0;
+    width: 93vw;
+    height: 40vh;
+}
+}
